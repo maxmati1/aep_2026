@@ -1,14 +1,31 @@
-#  CidadãoAtivo - Sistema de Solicitações Públicas
+# CidadãoAtivo - 2º Bimestre
 
-Sistema interativo em **Java POO** para gerenciar solicitações de serviços públicos, desenvolvido conforme especificações do Desafio Profissional ESOFT5S.
+Sistema de Solicitações Públicas com Spring Boot 3.2
 
-##  Características Principais
+## Arquitetura
+- Controller → Service → Repository
+- Banco H2
+- Frontend HTML/CSS/JS
 
-- ✅ **Cadastro interativo** de solicitações (o sistema pede nome, categoria, descrição, etc)
-- ✅ **Login e registro** de usuários
-- ✅ **3 tipos de usuários**: Cidadão, Atendente, Gestor
-- ✅ **Fluxo de status** completo (Aberto → Triagem → Em Execução → Resolvido → Encerrado)
-- ✅ **Acompanhamento por protocolo** com histórico
-- ✅ **Solicitações anônimas** para denúncias seguras
-- ✅ **SLA automático** conforme prioridade
-- ✅ **Dashboard gerencial** com estatísticas
+## Como Executar
+
+```bash
+mvn spring-boot:run
+http://localhost:8080
+```
+
+## Endpoints
+- POST /api/usuarios/registro
+- POST /api/usuarios/login
+- POST /api/solicitacoes
+- GET /api/solicitacoes
+- GET /api/solicitacoes/{id}
+- GET /api/solicitacoes/protocolo/{protocolo}
+
+## Funcionalidades
+✅ Login/Registro
+✅ Criar solicitações
+✅ Acompanhar por protocolo
+✅ Dashboard gerencial
+✅ Histórico de status
+✅ SLA automático
